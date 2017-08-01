@@ -5,13 +5,13 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+//var db = require('./config/db');
+var Model = require('./models/models');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var admin = require('./routes/admin');
 
 var app = express();
-
 
 // socket.io code
 
@@ -39,8 +39,8 @@ io.on('connection', function(socket){
   
 
 });
-server.listen(7878, function(){
-  console.log('listening on *:7878');
+server.listen(7979, function(){
+  console.log('listening on *:7979');
 });
   
 
